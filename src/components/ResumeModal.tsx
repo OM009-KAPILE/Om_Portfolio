@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { 
   X, 
   Download, 
@@ -39,7 +40,7 @@ export const ResumeModal: React.FC = () => {
   };
 
   const handleDownload = () => {
-    const downloadUrl = resume.resumeUrl || '/Om_Kapile_Resume.pdf';
+    const downloadUrl = resolveAssetUrl(resume.resumeUrl || 'Om_Kapile_Resume.pdf');
     const link = document.createElement('a');
     link.href = downloadUrl;
     link.download = resume.fileName || 'Om_Kapile_Resume.pdf';

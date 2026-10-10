@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { PortfolioData, SoftwareProject, CaseStudy } from '../types/portfolio';
 import { defaultPortfolioData } from '../data/defaultData';
 
-const STORAGE_KEY = 'om_portfolio_data_v6';
+const STORAGE_KEY = 'om_portfolio_data_v8';
 const THEME_KEY = 'om_portfolio_theme';
 
 interface Toast {
@@ -64,7 +64,11 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     try {
       let saved = localStorage.getItem(STORAGE_KEY);
       if (!saved) {
-        const oldSaved = localStorage.getItem('om_portfolio_data_v5') || localStorage.getItem('om_portfolio_data_v4');
+        const oldSaved = 
+          localStorage.getItem('om_portfolio_data_v7') ||
+          localStorage.getItem('om_portfolio_data_v6') || 
+          localStorage.getItem('om_portfolio_data_v5') || 
+          localStorage.getItem('om_portfolio_data_v4');
         if (oldSaved) {
           try {
             const oldParsed = JSON.parse(oldSaved);
@@ -78,8 +82,11 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
               return p;
             });
             oldParsed.projects = migratedProjects;
-            if (!oldParsed.personal?.profileImage) {
-              oldParsed.personal = { ...oldParsed.personal, profileImage: defaultPortfolioData.personal.profileImage };
+            if (oldParsed.personal) {
+              oldParsed.personal.profileImage = defaultPortfolioData.personal.profileImage;
+            }
+            if (oldParsed.resume) {
+              oldParsed.resume.resumeUrl = defaultPortfolioData.resume.resumeUrl;
             }
             localStorage.setItem(STORAGE_KEY, JSON.stringify(oldParsed));
             saved = JSON.stringify(oldParsed);
@@ -101,7 +108,17 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
           return p;
         });
 
-        const activeProfileImage = parsed.personal?.profileImage || defaultPortfolioData.personal.profileImage || '/om_profile.jpg';
+        const rawProfileImage = parsed.personal?.profileImage?.trim?.();
+        const isCustomUpload = rawProfileImage && (rawProfileImage.startsWith('data:') || rawProfileImage.startsWith('blob:') || (rawProfileImage.startsWith('http') && !rawProfileImage.includes('github.io')));
+        const activeProfileImage = isCustomUpload
+          ? rawProfileImage
+          : defaultPortfolioData.personal.profileImage;
+
+        const rawResumeUrl = parsed.resume?.resumeUrl?.trim?.();
+        const isCustomResume = rawResumeUrl && (rawResumeUrl.startsWith('data:') || rawResumeUrl.startsWith('blob:') || (rawResumeUrl.startsWith('http') && !rawResumeUrl.includes('github.io')));
+        const activeResumeUrl = isCustomResume
+          ? rawResumeUrl
+          : defaultPortfolioData.resume.resumeUrl;
 
         // Merge with default to guarantee all fields exist in case of schema updates
         return {
@@ -120,7 +137,11 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
           },
           experiences: parsed.experiences || defaultPortfolioData.experiences,
           sections: { ...defaultPortfolioData.sections, ...(parsed.sections || {}) },
-          resume: { ...defaultPortfolioData.resume, ...(parsed.resume || {}) }
+          resume: { 
+            ...defaultPortfolioData.resume, 
+            ...(parsed.resume || {}),
+            resumeUrl: activeResumeUrl
+          }
         };
       }
     } catch (e) {

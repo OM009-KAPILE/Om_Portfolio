@@ -14,7 +14,7 @@ export const defaultPortfolioData: PortfolioData = {
     introduction: "I'm a Computer Science Engineering student passionate about software development, artificial intelligence, and user-centered design. I enjoy transforming ideas into practical digital solutions through coding, experimentation, and creative problem-solving.",
     location: "India",
     phone: "+91 9158557553",
-    profileImage: "/om_profile.jpg",
+    profileImage: `${import.meta.env.BASE_URL}profile.jpg`,
     availableForWork: true,
     email: "kapileom2006@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/om-kapile-3a6590358",
@@ -201,7 +201,7 @@ export const defaultPortfolioData: PortfolioData = {
     }
   ],
   resume: {
-    resumeUrl: "/Om_Kapile_Resume.pdf",
+    resumeUrl: `${import.meta.env.BASE_URL}Om_Kapile_Resume.pdf`,
     fileName: "Om_Kapile_Resume.pdf",
     lastUpdated: "July 2026",
     educationSummary: "B.Tech in Artificial Intelligence & Machine Learning (Expected 2028), Sanjivani College of Engineering",

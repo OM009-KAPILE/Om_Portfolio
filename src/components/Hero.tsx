@@ -2,6 +2,7 @@ import React from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
 import { ArrowDown, Mail, Sparkles, Terminal, Code2, Palette, Cpu } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import { resolveAssetUrl } from '../utils/assetUrl';
 
 export const Hero: React.FC = () => {
   const { data } = usePortfolio();
@@ -138,27 +139,43 @@ export const Hero: React.FC = () => {
               <div className="relative bg-slate-900/90 dark:bg-slate-900/90 light:bg-white border border-slate-800 dark:border-slate-800 light:border-slate-200 rounded-2xl p-6 shadow-2xl backdrop-blur-xl">
                 
                 {/* Profile Image / Tech Monogram Placeholder */}
-                <div className="relative group/avatar mx-auto w-48 h-48 sm:w-52 sm:h-52 rounded-2xl overflow-hidden bg-slate-950 dark:bg-slate-950 light:bg-slate-100 border-2 border-teal-500/40 flex items-center justify-center shadow-lg shadow-teal-500/10 mb-6">
-                  {personal.profileImage ? (
-                    <img
-                      src={personal.profileImage}
-                      alt={personal.name}
-                      className="w-full h-full object-cover object-top scale-125 origin-top transition-transform duration-500 group-hover/avatar:scale-[1.32]"
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center justify-center text-center p-4 space-y-2">
-                      <div className="w-16 h-16 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
-                        <Terminal className="w-8 h-8" />
-                      </div>
-                      <div className="text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700">
-                        Profile Photo
-                      </div>
-                      <span className="text-[10px] text-slate-500 dark:text-slate-500 light:text-slate-400">
-                        Click below to upload
-                      </span>
+                {(() => {
+                  const defaultPhotoUrl = `${import.meta.env.BASE_URL}profile.jpg`;
+                  const profilePhotoSrc = resolveAssetUrl(personal.profileImage) || defaultPhotoUrl;
+                  return (
+                    <div className="relative group/avatar mx-auto w-48 h-48 sm:w-52 sm:h-52 rounded-2xl overflow-hidden bg-slate-950 dark:bg-slate-950 light:bg-slate-100 border-2 border-teal-500/40 flex items-center justify-center shadow-lg shadow-teal-500/10 mb-6">
+                      {profilePhotoSrc ? (
+                        <img
+                          src={profilePhotoSrc}
+                          alt={personal.name}
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            const defaultUrl = `${import.meta.env.BASE_URL}profile.jpg`;
+                            const fallbackUrl = `${import.meta.env.BASE_URL}om_profile.jpg`;
+                            if (target.src !== defaultUrl && !target.src.endsWith('profile.jpg')) {
+                              target.src = defaultUrl;
+                            } else if (target.src !== fallbackUrl && !target.src.endsWith('om_profile.jpg')) {
+                              target.src = fallbackUrl;
+                            }
+                          }}
+                          className="w-full h-full object-cover object-top scale-125 origin-top transition-transform duration-500 group-hover/avatar:scale-[1.32]"
+                        />
+                      ) : (
+                        <div className="flex flex-col items-center justify-center text-center p-4 space-y-2">
+                          <div className="w-16 h-16 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                            <Terminal className="w-8 h-8" />
+                          </div>
+                          <div className="text-xs font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700">
+                            Profile Photo
+                          </div>
+                          <span className="text-[10px] text-slate-500 dark:text-slate-500 light:text-slate-400">
+                            Click below to upload
+                          </span>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  );
+                })()}
 
                 {/* Identity snippet */}
                 <div className="text-center space-y-1 mb-4">

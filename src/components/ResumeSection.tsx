@@ -1,5 +1,6 @@
 import React from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { 
   FileText, 
   Download, 
@@ -21,7 +22,7 @@ export const ResumeSection: React.FC = () => {
   const handleDownload = () => {
     if (resume.resumeUrl) {
       const a = document.createElement('a');
-      a.href = resume.resumeUrl;
+      a.href = resolveAssetUrl(resume.resumeUrl);
       a.download = resume.fileName || 'Om_Kapile_Resume.pdf';
       document.body.appendChild(a);
       a.click();

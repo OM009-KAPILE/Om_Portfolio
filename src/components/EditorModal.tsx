@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
 import type { PortfolioData, SoftwareProject, CaseStudy, ProjectStatus, ExperienceItem } from '../types/portfolio';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { 
   X, 
   Save, 
@@ -490,7 +491,7 @@ export const EditorModal: React.FC = () => {
                     <div className="w-20 h-20 rounded-xl bg-slate-900 border border-slate-700 overflow-hidden flex items-center justify-center shrink-0">
                       {draft.personal.profileImage ? (
                         <img 
-                          src={draft.personal.profileImage} 
+                          src={resolveAssetUrl(draft.personal.profileImage)} 
                           alt="Profile Preview" 
                           className="w-full h-full object-cover object-top scale-125 origin-top" 
                         />
