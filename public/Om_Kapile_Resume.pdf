@@ -1,0 +1,88 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 4766 >>
+stream
+0 0 0 rg
+BT /F2 18 Tf 1 0 0 1 254 745 Tm (Om Kapile) Tj ET
+BT /F3 9.5 Tf 1 0 0 1 160 730 Tm (Software Engineering | UI/UX Design | Artificial Intelligence) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 108 717 Tm (+91 9158557553   *   linkedin.com/in/om-kapile-3a6590358   *   github.com/OM009-KAPILE   *   Kapileom2006@gmail.com) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 45 693 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.75 w 45 690 m 567 690 l S
+BT /F1 9 Tf 1 0 0 1 45 678 Tm (Technology student with a strong foundation in software engineering and UI/UX design, eager to apply technical) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 666.5 Tm (expertise to complex development challenges. Possesses hands-on experience in Python, JavaScript, and web) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 655.0 Tm (development, complemented by a deep understanding of AI/ML integration and user-centric design principles.) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 643.5 Tm (Demonstrated ability to deliver functional digital products through collaborative team environments and rigorous) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 632.0 Tm (research methodologies.) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 45 612.5 Tm (EXPERIENCE & PROJECTS) Tj ET
+0.75 w 45 609.5 m 567 609.5 l S
+BT /F2 9.5 Tf 1 0 0 1 45 597.5 Tm (Ural Federal University, Yekaterinburg, Russia) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 475 597.5 Tm (July 2026 - Present) Tj ET
+BT /F3 9 Tf 1 0 0 1 45 586.0 Tm (Summer Intern) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 574.5 Tm (-  Selected for a competitive international summer internship program, contributing to assigned technical and) Tj ET
+BT /F1 9 Tf 1 0 0 1 60 564.0 Tm (research tasks within a rigorous and fast-paced academic environment at the university level, using Figma.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 552.5 Tm (-  Collaborated with an international cohort of students and mentors to enhance technical and analytical skills) Tj ET
+BT /F1 9 Tf 1 0 0 1 60 542.0 Tm (through intensive coursework and the successful execution of applied research projects.) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 45 526.5 Tm (Labmentix India) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 475 526.5 Tm (April 2026 - Present) Tj ET
+BT /F3 9 Tf 1 0 0 1 45 515.0 Tm (UI/UX Designer) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 503.5 Tm (-  Designed comprehensive UI/UX concepts for digital products, applying advanced user research methods to) Tj ET
+BT /F1 9 Tf 1 0 0 1 60 493.0 Tm (translate complex user needs into wireframes and interactive high-fidelity prototypes.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 481.5 Tm (-  Collaborated with cross-functional teams to iterate design solutions, ensuring consistent visual language, optimal) Tj ET
+BT /F1 9 Tf 1 0 0 1 60 471.0 Tm (usability, and full accessibility compliance across all critical product touchpoints.) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 45 455.5 Tm (ProjectX - AI-Powered Student Collaboration Platform) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 444.0 Tm (-  Built a student collaboration platform with team formation, project applications, and task management.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 432.5 Tm (-  Integrated AI-based team matching, skill-gap detection, recommendations, and email notifications.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 421.0 Tm (-  Tech: Node.js, Express.js, Python, REST APIs, AI/ML) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 45 405.5 Tm (Gun Detection System - Real-Time Threat Monitoring) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 394.0 Tm (-  Developed a computer vision system to detect firearms in video feeds using YOLO and OpenCV.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 382.5 Tm (-  Implemented detection bounding boxes, confidence scores, and threat alerts.) Tj ET
+BT /F1 9 Tf 1 0 0 1 52 371.0 Tm (-  Developed computer vision solutions using Python, YOLO, OpenCV, and NumPy to detect and track objects in) Tj ET
+BT /F1 9 Tf 1 0 0 1 60 360.5 Tm (real-time across multiple datasets.) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 45 345.5 Tm (SKILLS & LANGUAGES) Tj ET
+0.75 w 45 342.5 m 567 342.5 l S
+BT /F2 9 Tf 1 0 0 1 45 331.5 Tm (Technical: ) Tj /F1 9 Tf (Python, JavaScript, Node.js, Express.js, REST APIs, SQL, HTML5, CSS3, Frontend, Backend, Java,) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 320.5 Tm (AI Tools, Web & App Development, Database Management, Git, GitHub) Tj ET
+BT /F2 9 Tf 1 0 0 1 45 308.5 Tm (Planning & Analysis: ) Tj /F1 9 Tf (UI/UX Research, Cross-functional Collaboration, Analytical Thinking, Project Management,) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 297.5 Tm (Figma, Prototyping) Tj ET
+BT /F2 9 Tf 1 0 0 1 45 285.5 Tm (Languages: ) Tj /F1 9 Tf (English, Hindi, Marathi) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 45 269.5 Tm (EDUCATION) Tj ET
+0.75 w 45 266.5 m 567 266.5 l S
+BT /F2 9.5 Tf 1 0 0 1 45 255.5 Tm (Bachelor of Technology, Artificial Intelligence and Machine Learning) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 490 255.5 Tm (Expected 2028) Tj ET
+BT /F3 9 Tf 1 0 0 1 45 244.0 Tm (Sanjivani College of Engineering, Kopargaon \(Sanjivani University\)) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000267 00000 n 
+0000005085 00000 n 
+0000005155 00000 n 
+0000005230 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+5308
+%%EOF
