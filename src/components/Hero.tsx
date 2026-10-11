@@ -25,10 +25,10 @@ export const Hero: React.FC = () => {
       <div className="absolute top-1/3 -left-20 w-[350px] h-[350px] bg-cyan-500/10 dark:bg-cyan-500/10 light:bg-cyan-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Visual Profile & Tech Card: Displayed first on mobile (order-1), right column on desktop (lg:order-2, lg:col-span-5) */}
-          <div className="order-1 lg:order-2 lg:col-span-5 flex flex-col items-center justify-center relative w-full">
+          {/* Visual Profile & Tech Card: Displayed first on mobile (order-1), right column on desktop (lg:order-2, lg:col-span-5, lg:col-start-8) */}
+          <div className="order-1 lg:order-2 w-full lg:col-span-5 lg:col-start-8 flex flex-col items-center justify-center relative">
             <div className="relative w-full max-w-sm">
               
               {/* Outer decorative glow frame */}
@@ -117,8 +117,8 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Headlines & Introduction: Displayed second on mobile (order-2), left column on desktop (lg:order-1, lg:col-span-7) */}
-          <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+          {/* Headlines & Introduction: Displayed second on mobile (order-2), left column on desktop (lg:order-1, lg:col-span-7, lg:col-start-1) */}
+          <div className="order-2 lg:order-1 w-full lg:col-span-7 lg:col-start-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             
             {/* Status Pill */}
             {personal.availableForWork && (
